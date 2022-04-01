@@ -1,12 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { className } from 'react-bootstrap'
 
-const ChirpCard = ({username, message, created}) => {
+const ChirpCard = ({ username, content, _created }) => {
     return (
-        <>
-            <h3>{username}</h3>
-            <p>{message}</p>
-            <small>{created}</small>
-        </>
+
+        <span className="card row-3">
+            <div className="card-header">
+                {username}
+            </div>
+            <div className="card-body">
+                <h5 className="card-title">{content}</h5>
+                <footer className="blockquote-footer">{_created}</footer>
+            </div>
+        </span>
     )
 }
 
