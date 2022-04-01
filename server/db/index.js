@@ -1,11 +1,11 @@
 import * as mysql from "mysql";
 
 const connection = mysql.createConnection({
-    host: 'localhost',
+    host: "localhost",
     port: 3306,
-    database: "c16_chirpr",
-    user: 'chirprapp',
-    password: 'password'
+    database: "chirpr",
+    user: "chirprapp",
+    password: "blahblah",
 });
 
 export const Query = (query, values) => {
@@ -15,11 +15,9 @@ export const Query = (query, values) => {
             resolve(results);
         });
     });
-}
+};
 
 import chirps from "./chirps";
 
 // this becomes db object in routes/chirps.js
-export default {
-    chirps
-}
+export default { chirps };
